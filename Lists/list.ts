@@ -31,7 +31,7 @@ class List {
     return this.datastore
   }
 
-  add = (item: Element) => {
+  addHigher = (item: Element) => {
     if (typeof item === "number") {
       if (
         [...this.datastore].filter(e => typeof e === 'number').concat(item).sort().pop() === item
@@ -43,6 +43,24 @@ class List {
     if (typeof item === "string") {
       if (
         [...this.datastore].filter(e => typeof e === 'string').concat(item).sort().pop() === item
+      ) {
+        this.append(item);
+      }
+    }
+  };
+
+  addSmaller = (item: Element) => {
+    if (typeof item === "number") {
+      if (
+        [...this.datastore].filter(e => typeof e === 'number').concat(item).sort().shift() === item
+      ) {
+        this.append(item);
+      }
+    }
+
+    if (typeof item === "string") {
+      if (
+        [...this.datastore].filter(e => typeof e === 'string').concat(item).sort().shift() === item
       ) {
         this.append(item);
       }

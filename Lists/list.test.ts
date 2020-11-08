@@ -11,50 +11,82 @@ describe('Lists', () => {
     )();
 
     // when
-    list.add(element);
+    list.addHigher(element);
 
     // then
     list.end();
     expect(list.getElement()).toEqual(element)
   })
 
-  it('should insert element into a list only if it\s larger than any of elements with same type', () => {
-    // given
-    const list = new List(1, 2);
-    const element = 3;
+  describe('add if higher', () => {
+    it('should insert element into a list only if it\s larger than any of elements with same type', () => {
+      // given
+      const list = new List(1, 2);
+      const element = 3;
 
-    // when
-    list.add(element);
+      // when
+      list.addHigher(element);
 
-    // then
-    list.end();
-    expect(list.getElement()).toEqual(element);
-    expect(list.length()).toEqual(3);
+      // then
+      list.end();
+      expect(list.getElement()).toEqual(element);
+      expect(list.length()).toEqual(3);
+    })
+
+    it('should not insert element into a list only if it\s smaller than any of elements with same type', () => {
+      // given
+      const list = new List(2, 3);
+      const element = 1;
+
+      // when
+      list.addHigher(element);
+
+      // then
+      expect(list.length()).toEqual(2);
+    })
+
+    it('should insert string element into a number list', () => {
+      // given
+      const list = new List(2, 3);
+      const element = faker.lorem.word();
+
+      // when
+      list.addHigher(element);
+
+      // then
+      list.end()
+      expect(list.getElement()).toEqual(element);
+      expect(list.length()).toEqual(3);
+    })
   })
 
-  it('should not insert element into a list only if it\s smaller than any of elements with same type', () => {
-    // given
-    const list = new List(2, 3);
-    const element = 1;
+  describe('add if smaller', () => {
+    it('should insert element into a list only if it\s larger than any of elements with same type', () => {
+      // given
+      const list = new List(1, 2);
+      const element = 3;
 
-    // when
-    list.add(element);
+      // when
+      list.addSmaller(element);
 
-    // then
-    expect(list.length()).toEqual(2);
-  })
+      // then
+      list.end();
+      expect(list.getElement()).toEqual(2);
+      expect(list.length()).toEqual(2);
+    })
 
-  it('should insert string element into a number list', () => {
-    // given
-    const list = new List(2, 3);
-    const element = faker.lorem.word();
+    it('should not insert element into a list only if it\s smaller than any of elements with same type', () => {
+      // given
+      const list = new List(2, 3);
+      const element = 1;
 
-    // when
-    list.add(element);
+      // when
+      list.addSmaller(element);
 
-    // then
-    list.end()
-    expect(list.getElement()).toEqual(element);
-    expect(list.length()).toEqual(3);
+      // then
+      list.end()
+      expect(list.getElement()).toEqual(element);
+      expect(list.length()).toEqual(3);
+    })
   })
 })
