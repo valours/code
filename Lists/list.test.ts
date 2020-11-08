@@ -43,4 +43,18 @@ describe('Lists', () => {
     // then
     expect(list.length()).toEqual(2);
   })
+
+  it('should insert string element into a number list', () => {
+    // given
+    const list = new List(2, 3);
+    const element = faker.lorem.word();
+
+    // when
+    list.add(element);
+
+    // then
+    list.end()
+    expect(list.getElement()).toEqual(element);
+    expect(list.length()).toEqual(3);
+  })
 })
