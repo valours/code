@@ -4,6 +4,7 @@
   "description": "",
   "main": " ",
   "scripts": {
+    "lint": "eslint . --ext .ts",
     "test": "jest --watch"
   },
   "repository": {
@@ -26,6 +27,7 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
     "@types/faker": "^5.1.4",
+    "eslint-config-prettier": "^6.15.0",
     "faker": "^5.1.0",
     "jest": "^26.6.3",
     "tslint": "^6.1.3",
