@@ -102,6 +102,28 @@ class BTS {
     return this.postOrder().join(' ');
   }
 
+  getMin = (): MyNode => {
+    if (!this.root) {
+      throw Error();
+    }
+    let current = this.root;
+    while (current.left) {
+      current = current.left
+    }
+    return current.data;
+  }
+
+  getMax = (): MyNode => {
+    if (!this.root) {
+      throw Error();
+    }
+    let current = this.root;
+    while (current.right) {
+      current = current.right
+    }
+    return current.data;
+  }
+
   insert = (data: any) => {
     const node = new MyNode(data);
 

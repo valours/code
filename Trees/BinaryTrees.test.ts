@@ -2,7 +2,7 @@ import BTS from "./BinaryTrees"
 import faker from 'faker';
 
 describe('Binary trees search', () => {
-  it('should return the root', () => {
+  it('Should return the root', () => {
     // given
     const bts = new BTS();
     const value = faker.random.number();
@@ -14,7 +14,7 @@ describe('Binary trees search', () => {
     expect(bts.getRoot().show()).toEqual(value);
   })
 
-  it('should add lower value to left of root', () => {
+  it('Should add lower value to left of root', () => {
     // given
     const bts = new BTS();
     const value = faker.random.number();
@@ -34,7 +34,7 @@ describe('Binary trees search', () => {
     }
   })
 
-  it('should add lower value to right of root', () => {
+  it('Should add lower value to right of root', () => {
     // given
     const bts = new BTS();
     const value = faker.random.number();
@@ -55,7 +55,7 @@ describe('Binary trees search', () => {
   })
 
   describe('Traversing a binary search tree', () => {
-    it('should return values for in order traversal function (10-2)', () => {
+    it('Should return values for in order traversal function (10-2)', () => {
       // given
       const bts = new BTS();
 
@@ -72,7 +72,7 @@ describe('Binary trees search', () => {
       expect(bts.showInOrder()).toEqual('3 16 22 23 37 45 99');
     })
 
-    it('should return values for pre order traversal function (10-5)', () => {
+    it('Should return values for pre order traversal function (10-5)', () => {
       // given
       const bts = new BTS();
 
@@ -89,7 +89,7 @@ describe('Binary trees search', () => {
       expect(bts.showPreOrder()).toEqual('23 16 3 22 45 37 99');
     })
 
-    it('should return values for post order traversal function (10-5)', () => {
+    it('Should return values for post order traversal function (10-5)', () => {
       // given
       const bts = new BTS();
 
@@ -105,5 +105,41 @@ describe('Binary trees search', () => {
       // then
       expect(bts.showPostOrder()).toEqual('3 22 16 37 99 45 23');
     })
+  })
+
+  describe('Binary search tree searches', () => {
+    it('Should return the minimum Value', () => {
+      // given
+      const bts = new BTS();
+
+      // when
+      bts.insert(23);
+      bts.insert(45);
+      bts.insert(16);
+      bts.insert(37);
+      bts.insert(3);
+      bts.insert(99);
+      bts.insert(22);
+
+      // then
+      expect(bts.getMin()).toEqual(3);
+    });
+
+    it('Should return the maximum Value', () => {
+      // given
+      const bts = new BTS();
+
+      // when
+      bts.insert(23);
+      bts.insert(45);
+      bts.insert(16);
+      bts.insert(37);
+      bts.insert(3);
+      bts.insert(99);
+      bts.insert(22);
+
+      // then
+      expect(bts.getMax()).toEqual(99);
+    });
   })
 })
