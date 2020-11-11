@@ -5,7 +5,7 @@
   "main": " ",
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "test": "jest --watch"
+    "test": "jest --watch --verbose"
   },
   "repository": {
     "type": "git",
