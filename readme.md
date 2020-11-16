@@ -1,12 +1,21 @@
-# Arrays
+# Data structure
+## Arrays
 
-# Lists
+## Lists
 ADT: list abstract data type
 
-# Stacks
+## Stacks
 LIFO: Last input / First output
 
-# Trees
+## Trees
 Edges / Nodes
 
-## Binary Trees and Binary Trees Search
+### Binary Trees and Binary Trees Search
+
+# Algorithm
+
+# Searching Techniques
+## Linear Search
+## Binary Search
+## Interpolation Search
+## Hash Table
