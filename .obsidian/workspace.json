@@ -11,13 +11,46 @@
             "id": "cb928a68fcbb0f2a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "readme.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "readme"
+            }
+          },
+          {
+            "id": "33fc47bd513e4fcb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "readme.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "readme"
+            }
+          },
+          {
+            "id": "36faf876d6000742",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Books/Data Structures and Algorithms with JavaScript.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Data Structures and Algorithms with JavaScript"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -89,6 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +132,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for readme"
             }
           },
           {
@@ -107,11 +141,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from readme"
             }
           },
           {
@@ -132,9 +167,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "readme.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of readme"
             }
           }
         ]
@@ -154,6 +191,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cb928a68fcbb0f2a",
-  "lastOpenFiles": []
+  "active": "33fc47bd513e4fcb",
+  "lastOpenFiles": [
+    "Books.md",
+    "Books/Data Structures and Algorithms with JavaScript.md",
+    "readme.md",
+    "Books"
+  ]
 }
