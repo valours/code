@@ -19,5 +19,5 @@ Edges / Nodes
 ## Binary Search
 ## Interpolation Search
 ## Hash Table
-# Books
+# [[Books]]
 [Data Structures and Algorithms with JavaScript](https://github.com/valours/code/blob/master/Books/Data%20Structures%20and%20Algorithms%20with%20JavaScript.md)
